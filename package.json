@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-{}
-=======
 {
   "homepage": "./",
-  "name": "jech-evaluacion-intermedia",
+  "name": "jech-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.2",
+    "@testing-library/user-event": "^12.8.1",
     "node-sass": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -43,4 +42,3 @@
     ]
   }
 }
->>>>>>> c048ec17c1896cafb76b5b781028f2a7ea7a71e0

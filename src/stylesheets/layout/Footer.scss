@@ -1,0 +1,34 @@
+@import '../core/_mixins.scss';
+@import '../core/_variables.scss';
+
+.footer {
+  background-color: $color-background;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color-detail;
+  margin-top: 20px;
+  bottom: 0;
+  color: $color-text;
+  font-family: $font-nav;
+
+  &__small{
+     
+
+      margin: 20px;
+  }
+
+  &__contact{
+    &--info{
+      margin-left: 10px;
+    }
+  }
+
+  // &__logo {
+  //   height: 40px;
+  //   margin: 20px;
+  // }
+}
