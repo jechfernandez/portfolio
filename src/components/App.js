@@ -100,7 +100,7 @@ import Footer from './Footer';
 
 export default function App() {
   return (
-    <div>
+    <div className="page">
       <Header />
       <Footer />
     </div>
