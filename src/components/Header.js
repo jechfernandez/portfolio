@@ -1,23 +1,25 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+// import NavBar from './NavBar';
 import '../stylesheets/layout/Header.scss';
 
 export default function Header () {
   return (
     <header className="header">
-      <div className="header__block">
-      <div className="header__block--jech">Jech Fernández</div>
-      <Link to="/">
-        <div>2021 - Portfolio</div>
-      </Link>
-      <Link to="/Work">
-        <div className="header__block--work">Work</div>
-      </Link>
-      
-      <div>About me</div>
-      <div>Contact</div>
-      <div> <span className='cursive'> jechfernandez@</span>gmail.com</div>
-      <div>Portfolio</div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col header__lowerCase">
+            2021 - Portfolio
+          </div>
+          <div className="col">
+            Home
+          </div><div className="col">
+            Work
+          </div><div className="col-2">
+            About me - Contact
+          </div>
+          <div className="col-6" />
+        </div>
       </div>
     </header>
   );

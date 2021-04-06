@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/mock-up
 /.pnp
 .pnp.js
 

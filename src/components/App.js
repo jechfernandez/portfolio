@@ -1,60 +1,9 @@
 import '../stylesheets/App.scss';
-import React, {useEffect, useState} from 'react';
-import {Route, Switch} from 'react-router-dom';
+// import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-
-// function App () {
-//   const [characters, setCharacters] = useState ([]);
-//   const [name, setName] = useState ('');
-//   const [gender, setGender] = useState ('all');
-//   const [species, setSpecies] = useState ('all');
-//   const [status, setStatus] = useState ('all');
-
-//   useEffect (() => {
-//     getDataFromApi ().then (data => setCharacters (data));
-//   }, []);
-
-//   const handleFilter = inputChange => {
-//     if (inputChange.key === 'name') {
-//       setName (inputChange.value);
-//     } else if (inputChange.key === 'gender') {
-//       setGender (inputChange.value);
-//     } else if (inputChange.key === 'species') {
-//       setSpecies (inputChange.value);
-//     } else if (inputChange.key === 'status') {
-//       setStatus (inputChange.value);
-//     }
-//   };
-
-//   const filterCharacter = characters
-//     .filter (character => {
-//       return character.name.toUpperCase ().includes (name.toUpperCase ());
-//     })
-//     .sort ((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
-//     .filter (character => {
-//       if (gender === 'all') {
-//         return true;
-//       } else {
-//         return character.gender === gender;
-//       }
-//     })
-//     .filter (character => {
-//       if (species === 'all') {
-//         return true;
-//       } else {
-//         return character.species === species;
-//       }
-//     })
-//     .filter (character => {
-//       if (status === 'all') {
-//         return true;
-//       } else {
-//         return character.status === status;
-//       }
-//     });
-
-//   console.log (filterCharacter);
+import Home from './Home';
 
 //   const renderDetail = props => {
 //     console.log (props.match.params);
@@ -79,12 +28,12 @@ import Footer from './Footer';
 //         <Header />
 //         <Switch>
 //           <Route exact path="/">
-//             <Filter 
+//             <Filter
 //             name={name}
 //             gender={gender}
-//             species={species} 
+//             species={species}
 //             status={status}
-//             handleFilter={handleFilter} 
+//             handleFilter={handleFilter}
 //             handleReset={handleReset} />
 //             <CharacterList characters={filterCharacter} />
 //           </Route>
@@ -98,12 +47,17 @@ import Footer from './Footer';
 
 // export default App;
 
-export default function App() {
+export default function App () {
   return (
     <div className="page">
-      <Header />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" />
+        </Switch>
+      </Router>
+      <Home />
       <Footer />
     </div>
-  )
+  );
 }
-

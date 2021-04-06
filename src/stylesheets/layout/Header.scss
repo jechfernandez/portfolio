@@ -2,32 +2,19 @@
 @import '../core/_variables.scss';
 
 .header {
-  display: grid;
   height: 100px;
-  grid-auto-columns: 1fr;
-  grid-template-columns: repeat(12, 1fr);
   font-family: $font-nav;
+  text-transform: uppercase;
   font-weight: 300;
   font-size: 11px;
+  text-align: center;
   color: $color-text;
 
-  width: 100%;
+  width: 100vw;
+  margin-top: 15px;
   margin-bottom: 15px;
 
-
-  &__block{
-
-    &--jech{
-      grid-column-start: 1;
-    }
-
-    &--work{
-      grid-column-start: 6;
-
-    }
+  &__lowerCase {
+    text-transform: none;
   }
-}
-
-.cursive{
-  font-style: italic ;
 }
