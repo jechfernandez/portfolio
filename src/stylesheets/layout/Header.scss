@@ -2,19 +2,36 @@
 @import '../core/_variables.scss';
 
 .header {
-  height: 100px;
   font-family: $font-nav;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 11px;
   text-align: center;
   color: $color-text;
-
+  
   width: 100vw;
   margin-top: 15px;
   margin-bottom: 15px;
 
   &__lowerCase {
     text-transform: none;
+    transform: rotate(-90deg) translateY(-100px);
+    position: absolute;
+    margin-top: 50px;
+    height: auto;
+    padding: 0;
+    top: 0;
   }
+}
+
+.hidden{
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.translate{
+  transform: translateX(-50px);
 }
