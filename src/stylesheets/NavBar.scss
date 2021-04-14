@@ -3,15 +3,18 @@
 
 .navbar {
   background-color: $color-background;
-  height: 80px;
+  height: 30px;
   position: fixed;
   justify-content: start;
   align-items: center;
   font-family: $font-nav;
+  font-weight: 0;
+  width: 100vw;
+  z-index: 1210;
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  margin-left: 1rem;
   font-size: 2rem;
   background: none;
 }

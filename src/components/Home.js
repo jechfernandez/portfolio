@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import '../stylesheets/layout/Home.scss';
 import welcome from '../images/01-home/wheel-welcome.png';
 import passion from '../images/01-home/wheel-passion.png';
@@ -14,7 +15,7 @@ function Home () {
       <img src={sky} className="home__sky" alt="Sky with clouds" />
       <img
         src={welcome}
-        className="home__wheel"
+        className="home__wheel--1"
         alt="welcome to my portfolio"
       />
       <p className="paragraph__main">
@@ -24,38 +25,46 @@ function Home () {
       <h2 className="subtitle">
         Front-end <span className="subtitle__bold">Development</span>
       </h2>
-      {/* <p className="paragraph__second">
+       <p className="paragraph__second">
+        <div className="paragraph__second--1">
         <span>Education:</span>
-        <span>Bootcamp @ Adalab 2020-2021</span>
-        <span>Intro to Python @ Ada ITW 2021</span>
-        <span>Adv. JavaScript @ Ada ITW 2021</span>
+        <p>Bootcamp @ Adalab 2020-2021 <br/> Intro to Python @ Ada ITW 2021 <br/> Adv. JavaScript @ Ada ITW 2021 </p>
+        </div>
       </p>
 
-      <h2 className="subtitle">
+       <h2 className="subtitle">
         Graphic <span className="subtitle__bold">Design</span>
       </h2>
       <p className="paragraph__second">
+        <div className="paragrapgh__second--2">
         <span>Education:</span>
-        <span>Duoc UC 2014-2018</span>
-        <span>Universidad de Chile 2012 - 2013</span>
+        <p>Duoc UC 2014-2018 <br/> Universidad de Chile 2012 - 2013</p>
+        </div>
+
+        
       </p>
 
-      <button className="button">(here)</button>
+       <Link to='/Work'title="Check out my work" className="button">
+       (tap here)
+        </Link>
+       
 
-      <p className="paragraph__tiny">
+      <p className="paragraph__tiny hidden">
         {' '}Click on the big a** button
         to see my latest projects
       </p>
 
-      <img
+       <img
         src={passion}
-        className="home__wheel"
+        className="home__wheel--2"
         alt="Things I'm passionate about"
       />
       <img src={flower} className="home__flower" alt="Dahlia" />
 
-      <i className="fas fa-arrow-up" />
-      <p className="top">Back to top</p> */}
+     <div className="top">
+     <i className="fas fa-arrow-up top--arrow" />
+      <p className="top--text">Back to top</p>
+     </div>
     </div>
   );
 }
