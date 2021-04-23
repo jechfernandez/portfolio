@@ -1,46 +1,45 @@
-import React, { useState } from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
+import React from 'react';
 import '../stylesheets/NavBar.scss';
-import { IconContext } from 'react-icons';
+import { stickyNavbar } from './transitionsHelper';
+import MenuHamburger from '../images/hamb-icon.png';
+import { Link } from "react-router-dom";
 
-function Navbar() {
-  const [sidebar, setSidebar] = useState(false);
+const Navigation = () => {
 
-  const showSidebar = () => setSidebar(!sidebar);
+  document.addEventListener('scroll', stickyNavbar)
 
+  const handleMenuBtn = () => {
+      document.querySelector('.drop-menu').classList.contains('visible') ?
+
+          document.querySelector('.drop-menu').classList.remove('visible')
+          :
+          document.querySelector('.drop-menu').classList.add('visible')
+
+  }
   return (
-    <>
-      <IconContext.Provider value={{ color: 'red' }}>
-        <div className='navbar'>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
-        </div>
-        <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-          <ul className='nav-menu-items' onClick={showSidebar}>
-            <li className='navbar-toggle'>
-              <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
-              </Link>
-            </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span className="span-nav" >{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-    </>
+      <>
+          <nav className='navbar'>
+              <Link to='/' className='scrollto title'>Jech Fernández</Link>
+              <nav className="mr-auto">
+              <ul>
+                  <li ><Link to='/' onClick={handleMenuBtn}>Home</Link></li>
+                  <li ><Link to="/work" onClick={handleMenuBtn}>Work</Link></li>
+                  <li ><Link to='/about' onClick={handleMenuBtn}>About me - Contact</Link></li>
+              </ul>
+              </nav>
+
+              <button className='menu-btn' onClick={handleMenuBtn}><img src={MenuHamburger} alt='menu' /></button>
+          </nav>
+          <div className='drop-menu'>
+              <ul>
+                  <li><a href="#home" onClick={handleMenuBtn}>Home</a></li>
+                  <li><a href="#work" onClick={handleMenuBtn}>Work</a></li>
+                  <li><a href="#about" onClick={handleMenuBtn}>About me</a></li>
+              </ul>
+          </div>
+
+      </>
   );
 }
 
-export default Navbar;
+export default Navigation;

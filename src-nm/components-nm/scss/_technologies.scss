@@ -1,0 +1,84 @@
+//STACK
+
+.technologies-section{
+height: 500px;
+background-color: white;
+margin-top: 30px;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 65px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  p{
+    width: 500px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+
+  .technologies-img{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 220px;
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+
+    .tech-img {
+      position: absolute;
+      left: -120px;
+      width: 120%;
+    }
+  }
+
+
+
+  @media (max-width: 500px){
+
+     h2 {
+    font-size: 50px;
+    }
+    p {
+      width: 300px;
+      font-size: 15px;
+    }
+
+    .technologies-img{
+    height: 150px;
+
+
+    .tech-img {
+      position: absolute;
+      left: -120px;
+      width: 1000px;
+      }
+    }
+}
+}
+
+@media (max-width: 500px){
+
+  .technologies-section {
+    height: 380px;
+  }
+}
+@media (min-width: 1400px){
+
+  .technologies-section {
+    height: 600px;
+
+ .technologies-img{
+    height: 400px;
+  }
+  }
+
+  .technologies-img:hover{
+    opacity: 1
+  }
+
+}

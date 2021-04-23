@@ -1,18 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import '../stylesheets/layout/Home.scss';
-import '../stylesheets/scrollTop.scss';
-import welcome from '../images/01-home/wheel-welcome.png';
-import passion from '../images/01-home/wheel-passion.png';
-import sky from '../images/01-home/01-sky.jpg';
-import flower from '../images/01-home/02-flower.jpg';
+import '../../stylesheets/layout/Work.scss';
 
-function Home () {
+
+function Work () {
 
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
  };
-
+ 
   return (
     <div className="home container-fluid">
       <h1 className="title">
@@ -87,4 +82,4 @@ function Home () {
   );
 }
 
-export default Home;
+export default Work;
