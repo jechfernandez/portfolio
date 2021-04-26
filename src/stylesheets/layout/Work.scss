@@ -1,0 +1,160 @@
+@import '../core/_mixins.scss';
+@import '../core/_variables.scss';
+
+.work {
+  display: grid;
+  grid-column-gap: 0.1%;
+  width: 100vw;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50px 50px 250px 30px 40px 60px 60px 60px 60px 300px 60px 60px 60px 60px 60px 60px;
+
+  .title {
+    grid-column: 2 / 5;
+    margin-right: 10px;
+    font-family: $font-title;
+    color: $color-icon;
+    font-size: $size-title-mobile;
+    font-weight: 300;
+    z-index: 100;
+    margin-top: 13px;
+    text-align: end;
+
+    &__bold {
+      margin-left: 10px;
+      font-weight: 400;
+      grid-row: 2/3;
+      grid-column: 3/5;
+    }
+  }
+
+  .subtitle {
+    
+    color: $color-icon;
+    grid-column: 1 / 4;
+    grid-row-start: 4;
+    text-align: left;
+    font-family: $font-title;
+    font-size: $size-subtitle-mobile;
+
+    font-weight: 300;
+    &__bold {
+      font-weight: 400;
+    }
+  }
+
+  .paragraph {
+    &__main {
+      grid-row: 5/6;
+      grid-column: 1/5;
+      text-align: left;
+      font-family: $font-title;
+      color: $color-icon;
+      font-weight: 200;
+      font-size: $size-mainp-mobile;
+    }
+
+    &__second {
+      grid-column: 1/4;
+      font-family: $font-nav;
+      font-size: $size-secondp-mobile;
+      text-align: left;
+      opacity: 0.8;
+
+      &--1 {
+        grid-row: 6/7;
+      }
+
+      &--2 {
+        grid-row: 8/9;
+      }
+
+      
+    }
+  }
+
+  &__wheel--1 {
+    width: 80%;
+    grid-column: 2 / 3;
+    grid-row-end: 4;
+    z-index: 101;
+    position: relative;
+    top: 150px;
+    right: 50px;
+  }
+
+  &__wheel--2 {
+    width: 100%;
+    grid-column: 1 / 2;
+    z-index: 101;
+    position: relative;
+    top: 250px;
+    left: 45px;
+  }
+
+  &__mad {
+    grid-column: 2/5;
+    width: 100%;
+    height: auto;
+    z-index: 99;
+    position: relative;
+    grid-row-start: 3;
+  }
+
+  &__flower {
+    grid-column: 2/5;
+    width: 100%;
+    height: 300px;
+    z-index: 99;
+    position: relative;
+  }
+
+  &__front{
+
+    &--1{
+        grid-column: 1/5;
+        grid-row-start: 6;
+        width: 100%;
+        height: auto;
+
+    }
+
+    &--2{
+        grid-column: 1/5;
+        grid-row-start: 9;
+        width: 100%;
+        height: auto;
+    }
+
+    &--3{
+        grid-column: 1/3;
+        grid-row-start: 8;
+        width: 100%;
+        height: auto;
+    }
+
+
+  }
+
+  .button {
+      z-index: 100000;
+    text-decoration: none;
+    background-color: $color-icon;
+    grid-row: 7 / 9;
+    grid-column: 4/5;
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    font-family: $font-title;
+    color: white;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hidden {
+    display: none;
+  }
+
+  
+}

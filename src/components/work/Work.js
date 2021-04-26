@@ -1,5 +1,20 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../../stylesheets/layout/Work.scss';
+import editorialWheel from '../../images/02-work/wheel-editorial.png';
+import frontBack from '../../images/02-work/wheel-front-back.png';
+import madWomen from '../../images/02-work/01-mad-women.jpg';
+import treeHuggers from '../../images/02-work/02-tree-huggers.jpg';
+import spacelabers from '../../images/02-work/03-spacelabers.jpg';
+import rickMorty from '../../images/02-work/04-rick-morty.jpg';
+import whatToWatch from '../../images/02-work/05-what-to-watch.jpg';
+import bloom from '../../images/02-work/06-bloom.mov';
+import pistillo from '../../images/02-work/07-pistillo.jpg';
+import editorial from '../../images/02-work/08-editorial.jpg';
+import others from '../../images/02-work/09-others.jpg';
+
+
+
 
 
 function Work () {
@@ -9,69 +24,64 @@ function Work () {
  };
  
   return (
-    <div className="home container-fluid">
+    <div className="work container-fluid">
       <h1 className="title">
-        Jech<span className="title__bold">Fernández</span>
+        Here's <br></br> <span className="title__bold">What I do</span>
       </h1>
-      <img src={sky} className="home__sky" alt="Sky with clouds" />
+      <img src={madWomen} className="work__mad" alt="Screenshot of React Mad Women website" />
       <img
-        src={welcome}
-        className="home__wheel--1"
-        alt="welcome to my portfolio"
+        src={frontBack}
+        className="work__wheel--1"
+        alt="Front and back end projects"
       />
+       <h2 className="subtitle">
+        Front-end <span className="subtitle__bold">Development</span>
+      </h2>
       <p className="paragraph__main">
-        Welcome to my portfolio, a place for me to display my
-        work as a front-end developer & graphic designer.
+        Projects built using HTML, SCSS, JavaScript & React 
       </p>
+      
+      <img src={treeHuggers} className="work__front--1" alt="Screenshot of React Mad Women website" />
+      
+      <img src={spacelabers} className="work__front--2" alt="Screenshot of React Mad Women website" />
+      <img src={rickMorty} className="work__front--3" alt="Screenshot of React Mad Women website" />
+      {/*<img src={whatToWatch} className="work__sky" alt="Screenshot of React Mad Women website" />
+
       <h2 className="subtitle">
         Front-end <span className="subtitle__bold">Development</span>
       </h2>
-      <p className="paragraph__second">
-        <div className="paragraph__second--1">
-          <span>Education:</span>
-          <p>
-            Bootcamp @ Adalab 2020-2021
-            {' '}
-            <br />
-            {' '}
-            Intro to Python @ Ada ITW 2021
-            {' '}
-            <br />
-            {' '}
-            Adv. JavaScript @ Ada ITW 2021
-            {' '}
-          </p>
-        </div>
-      </p>
+      <p className="paragraph__main">
+        Projects built using HTML, SCSS, JavaScript & React </p>
+      
 
       <h2 className="subtitle">
         Graphic <span className="subtitle__bold">Design</span>
       </h2>
-      <p className="paragraph__second">
-        <div className="paragrapgh__second--2">
-          <span>Education:</span>
-          <p>Duoc UC 2014-2018 <br /> Universidad de Chile 2012 - 2013</p>
-        </div>
 
-      </p>
+        <p className="paragraph__main">
+        Through the years I've worked in different projects, here are some of my favourites </p>
+      
 
       
 
-      <Link to="/work" title="Check out my work" className="button">
-        (tap here)
+      <Link to="/work/pistillo" title="Check out my work at Pistillo" className="button">
+        Pistillo - personal project
       </Link>
 
-      <p className="paragraph__tiny hidden">
-        {' '}Click on the big a** button
-        to see my latest projects
-      </p>
-
+      <img src={pistillo} className="work__flower" alt="My personal project" />
+      <img src={editorial} className="work__flower" alt="My personal project" />
       <img
-        src={passion}
-        className="home__wheel--2"
-        alt="Things I'm passionate about"
+        src={editorialWheel}
+        className="work__wheel--2"
+        alt="Editorial Work"
       />
-      <img src={flower} className="home__flower" alt="Dahlia" />
+      <img src={others} className="work__flower" alt="My personal project" />
+      
+
+
+       */}
+
+      
 
       <div className="top" onClick={scrollTop}>
         <i className="fas fa-arrow-up top--arrow" />
