@@ -3,10 +3,9 @@
 
 .work {
   display: grid;
-  grid-column-gap: 0.1%;
   width: 100vw;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50px 50px 250px 30px 40px 60px 60px 60px 60px 300px 60px 60px 60px 60px 60px 60px;
+  grid-template-rows: 3.12rem 3.12rem 15.7rem 1.875rem 2.5rem 30px 40px 60px 60px 60px 60px 300px 60px 60px 60px 60px 60px 60px;
 
   .title {
     grid-column: 2 / 5;
@@ -31,7 +30,7 @@
     
     color: $color-icon;
     grid-column: 1 / 4;
-    grid-row-start: 4;
+    grid-row-start: 5;
     text-align: left;
     font-family: $font-title;
     font-size: $size-subtitle-mobile;
@@ -44,7 +43,7 @@
 
   .paragraph {
     &__main {
-      grid-row: 5/6;
+      grid-row: 6/7;
       grid-column: 1/5;
       text-align: left;
       font-family: $font-title;
@@ -61,7 +60,7 @@
       opacity: 0.8;
 
       &--1 {
-        grid-row: 6/7;
+        grid-row: 7/8;
       }
 
       &--2 {
@@ -112,7 +111,7 @@
 
     &--1{
         grid-column: 1/5;
-        grid-row-start: 6;
+        grid-row-start: 7;
         width: 100%;
         height: auto;
 
@@ -121,7 +120,7 @@
     &--2{
         grid-column: 1/5;
         grid-row-start: 9;
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
